@@ -1,13 +1,14 @@
 <template>
-  <router-view />
+  <div>Index</div>
 </template>
-<script>
+
+<script lang="ts">
 import { defineComponent } from 'vue'
-import { useProvide } from './context/index'
 
 export default defineComponent({
+  name: 'Index',
   setup() {
-    useProvide()
+    return {}
   }
 })
 </script>
