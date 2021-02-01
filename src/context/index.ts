@@ -1,8 +1,15 @@
-import { useBookInject, useBookListProvide } from './books'
-import { useTodoProvider, useTodoInject } from './todos'
-export { useBookInject, useTodoInject }
+import { useUserProvide, useUserInject } from './user'
+import { useTaskInject, useTaskProvide } from './task'
+import { App } from 'vue'
+export { useUserInject, useTaskInject }
 
 export const useProvide = () => {
-  useBookListProvide()
-  useTodoProvider()
+  useUserProvide()
+  useTaskProvide()
 }
+
+// export default {
+//   install : (app: App<Element>) {
+//     app.
+//   }
+// }

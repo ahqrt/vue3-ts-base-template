@@ -16,6 +16,10 @@ module.exports = {
   rules: {
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/camelcase': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    'component-name-in-template-casing': 'off',
+    'space-before-function-paren': 'off',
     '@typescript-eslint/member-delimiter-style': [
       'error',
       {
