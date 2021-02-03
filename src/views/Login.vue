@@ -42,6 +42,7 @@ import { encode, decode } from 'js-base64'
 import { computed, defineComponent, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
+
 interface LoginForm {
   account_name: string
   password: string
@@ -93,7 +94,6 @@ export default defineComponent({
             window.localStorage.setItem('usernameitemdasd', '')
             window.localStorage.setItem('paswfegwqeqweqw', '')
           }
-          // UserModule.Login(this.form)
           store.dispatch('user/Login', form.value)
           router.push({
             path: '/'

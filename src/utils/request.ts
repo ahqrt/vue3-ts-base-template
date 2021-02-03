@@ -1,5 +1,4 @@
 import { refreshToken } from '@/api/users'
-import { GlobalProps } from '@/store'
 import axios from 'axios'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { getToken } from './cookies'
@@ -15,8 +14,7 @@ service.interceptors.request.use(
     // Add X-Access-Token header to every request, you can add other custom headers here
     if (getToken()) {
       // config.headers['Authorization'] = 'Bearer ' + UserModule.token
-      config.headers['Authorization'] =
-        'Bearer ' + window.sessionStorage.getItem('token')
+      config.headers['Authorization'] = 'Bearer ' + getToken()
     }
     return config
   },
